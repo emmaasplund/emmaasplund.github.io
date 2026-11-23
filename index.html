@@ -1,1 +1,29 @@
-ahoj
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glóbus akcí</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="globe-wrap">
+      <div id="globe" aria-label="Interaktivní glóbus"></div>
+      <p class="hint">Klikni na glóbus nebo na značku města</p>
+    </section>
+
+    <aside class="panel" aria-live="polite">
+      <h1 id="city-name">Vyber město</h1>
+      <p id="city-sub">Kliknutím na glóbus zobrazíš akce v okolí.</p>
+      <div id="filters" class="filters" role="group" aria-label="Filtr kategorií"></div>
+      <ul id="events" class="events"></ul>
+    </aside>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/globe.gl@2.27.2/dist/globe.gl.min.js"></script>
+  <script src="events.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
